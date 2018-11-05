@@ -1,5 +1,5 @@
 class Person < ActiveRecord::Base
-	def self.calc_path_number(birthdate)
+	def self.get_birth_path_num(birthdate)
 		i = 0
 		digit_sum = 0
 		while i < birthdate.length
@@ -50,5 +50,9 @@ class Person < ActiveRecord::Base
 			when 9
 				return "Your numerology number is #{birth_path_number}. \nThis is the teacher. Number Nine is a tolerant, somewhat impractical, and sympathetic vibration. Ruled by Mars."
 		end
+	end
+
+	def self.format_birthdate(birthdate)
+		birthdate.strftime("%m/%d/%Y")
 	end
 end
