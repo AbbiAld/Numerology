@@ -53,6 +53,6 @@ class Person < ActiveRecord::Base
 	end
 
 	def self.format_birthdate(birthdate)
-		birthdate.strftime("%m/%d/%Y")
+		birthdate = Date.new.strptime(birthdate, "%m/%d/%Y")
 	end
 end

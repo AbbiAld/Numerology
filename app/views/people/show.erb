@@ -1,7 +1,8 @@
 <h3>Name:</h3>
 <p><%= @person.first_name %> <%= @person.last_name %></p>
 <h3>Birthdate:</h3> 
-<p><%= @birthdate %></p>
+<p><%= @birthdate.strftime("%m/%d/%Y") %></p>
 <h3>Birthpath Number:</h3>
 <p><%= @message %></p>
-<a href="/people">Back to List</a>
+<a href="/people/<%= @person.id %>/edit" class="btn btn-default">Edit</a>
+<a href="/people" class="btn btn-default">Back to List</a>
