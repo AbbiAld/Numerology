@@ -1,12 +1,10 @@
-<form action="/people" method="post">
-	<label for="first_name">First Name:</label>
-	<input type="text" name="first_name" />
-
-	<label for="last_name">Last Name:</label>
-	<input type="text" name="last_name" />
-
-	<label for="birthdate">Birthdate:</label>
-	<input name="birthdate" type="date" />
-
-	<input type="submit" />
-</form>
+<div class="row col-md-4">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h1 class="panel-title">Add a Person</h1>
+		</div>
+		<div class="panel-body">
+			<%= erb :"/people/_form" %> 
+		</div>
+	</div>
+</div>

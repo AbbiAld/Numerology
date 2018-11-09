@@ -1,8 +1,7 @@
-<h3>Name:</h3>
-<p><%= @person.first_name %> <%= @person.last_name %></p>
-<h3>Birthdate:</h3> 
-<p><%= @birthdate.strftime("%m/%d/%Y") %></p>
-<h3>Birthpath Number:</h3>
-<p><%= @message %></p>
-<a href="/people/<%= @person.id %>/edit" class="btn btn-default">Edit</a>
-<a href="/people" class="btn btn-default">Back to List</a>
+<div class="show row col-md-4 col-md-offset-4">
+	<h2><%= @person.first_name %> <%= @person.last_name %></h2>
+	<h3><%= @birthdate.strftime("%m/%d/%Y") %></h3>
+	<p><%= @message %></p>
+	<a href="/people/<%= @person.id %>/edit" class="btn btn-default">Edit</a>
+	<a href="/people" class="btn btn-default">Back to List</a>
+</div>

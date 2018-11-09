@@ -1,0 +1,19 @@
+<form action="<%= people_form_action(@person) %>"" method="post" id="<%= people_form_id(@person) %>" class="<%= people_form_class(@person) %>">
+	<input name="_method" type="hidden" value="<%= people_form_method(@person) %>" />
+	<div class="form-group">
+		<label for="first_name">First Name:</label>
+		<input name="first_name" type="text" class="form-control" value="<%= @person.first_name %>" />
+	</div>
+	<div class="form-group">
+		<label for="last_name">Last Name:</label>
+		<input name="last_name" type="text" class="form-control" value="<%= @person.last_name %>" />
+	</div>
+	<div class="form-group">
+		<label for="birthdate">Birthdate:</label>
+		<input name="birthdate" type="date" class="form-control" value="<%= @person.birthdate.strftime("%Y-%m-%d") %>" />
+	</div>
+	<div>
+		<input class="btn btn-default" type="submit" value="<%= people_form_button(@person) %>" />
+		<a href="/people" class="btn btn-default">Cancel</a>
+	</div>
+</form>

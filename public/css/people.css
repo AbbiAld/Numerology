@@ -1,0 +1,23 @@
+body {
+	background-image: url("/img/klemen-vrankar-757982-unsplash.jpg");
+	color: #efba88;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.new-person {
+
+}
+
+.edit-person {
+
+}
+
+.form-control {
+	line-height: inherit !important;
+}
+
+.show {
+	text-align: center;
+}

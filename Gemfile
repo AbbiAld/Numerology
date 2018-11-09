@@ -11,3 +11,6 @@ gem 'rake'
 gem 'rack'
 gem 'rack-test'
 gem 'faker'
+
+gem 'kaminari-sinatra'
+gem 'kaminari-activerecord'

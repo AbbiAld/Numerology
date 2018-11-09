@@ -4,6 +4,8 @@ get '/people' do
 end
 
 get '/people/new' do
+	@person = Person.new
+	@person.birthdate = Date.today
 	erb :"/people/new"
 end
 
@@ -16,14 +18,6 @@ post '/people' do
 
 	person = Person.create(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
 	redirect "/people/#{person.id}"
-end
-
-get '/people/:id' do
-	@person = Person.find(params[:id])
-	@birthdate = @person.birthdate
-	birth_path_number = Person.get_birth_path_num(@person.birthdate.strftime("%m%d%Y"))
-	@message = Person.message(birth_path_number)
-	erb :"/people/show"
 end
 
 get '/people/:id/edit' do
@@ -40,8 +34,18 @@ put '/people/:id' do
 	redirect "/people/#{person.id}"
 end
 
-delete 'people/:id' do
-	@person = Person.find(params[:id])
-	@person.destroy
+delete '/people/:id' do
+	person = Person.find(params[:id])
+	person.destroy
 	redirect "/people"
 end
+
+get '/people/:id' do
+	@person = Person.find(params[:id])
+	@birthdate = @person.birthdate
+	birth_path_number = Person.get_birth_path_num(@person.birthdate.strftime("%m%d%Y"))
+	@message = Person.message(birth_path_number)
+	erb :"/people/show"
+end
+
+

@@ -1,4 +1,6 @@
 require 'sinatra'
+require 'will_paginate'
+require 'will_paginate/active_record'
 
 
 def setup_index_view
