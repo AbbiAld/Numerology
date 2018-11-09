@@ -1,5 +1,8 @@
 get '/people' do
-	@people = Person.all
+	@people = Person.all.order(birthdate: :desc)
+	@people_half = people_table_split(@people)
+	@people1 = @people.limit(@people_half)
+	@people2 = @people.offset(@people_half + 1)
 	erb :"/people/index"
 end
 

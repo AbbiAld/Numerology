@@ -1,34 +1,72 @@
-<div class="row col-md-8 col-md-offset-2">
-<h1>People <a href="/people/new" class="btn btn-default">Add New Person</a></h1>
-<table class="table table-condensed table-hover">
-	<thead>
-		<th>Name</th>
-		<th>Birthdate</th>
-		<th></th>
-		<th></th>
-	</thead>
-	<tbody>
-		<% @people.each do |person| %>
-		<tr>
-			<td>
-				<a href="/people/<%= person.id %>"><%= person.first_name %> <%= person.last_name %></a>
-			</td>
-			<td>
-				<%if person.birthdate != nil %>
-					<%= person.birthdate.strftime("%m/%d/%Y") %>
-				<% end %>
-			</td>
-			<td>
-				<a class="btn btn-default btn-sm" role="button" href="/people/<%= person.id %>/edit">Edit</a>
-			</td>
-			<td>
-				<form action="<%= "/people/#{person.id}" %>" method="post">
-					<input type="hidden" name="_method" value="delete" />
-					<input class="btn btn-default btn-sm" type="submit" value="Delete" />
-				</form>
-			</td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
+<div class="row col-md-offset-1 col-sm-offset-1">
+	<h1>People <a href="/people/new" class="btn btn-default">Add New Person</a></h1>
+</div>
+	<div class="row">
+		<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1">
+			<table class="table table-condensed">
+				<thead>
+					<th>Name</th>
+					<th>Birthdate</th>
+					<th></th>
+					<th></th>
+				</thead>
+				<tbody>
+					<% @people1.each do |person| %>
+					<tr>
+						<td>
+							<a href="/people/<%= person.id %>"><%= person.first_name %> <%= person.last_name %></a>
+						</td>
+						<td>
+							<%if person.birthdate != nil %>
+								<%= person.birthdate.strftime("%m/%d/%Y") %>
+							<% end %>
+						</td>
+						<td>
+							<a class="btn btn-default btn-sm" role="button" href="/people/<%= person.id %>/edit">Edit</a>
+						</td>
+						<td>
+							<form action="<%= "/people/#{person.id}" %>" method="post">
+								<input type="hidden" name="_method" value="delete" />
+								<input class="btn btn-default btn-sm" type="submit" value="Delete" />
+							</form>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-5 col-sm-5">
+			<table class="table table-condensed">
+				<thead>
+					<th>Name</th>
+					<th>Birthdate</th>
+					<th></th>
+					<th></th>
+				</thead>
+				<tbody>
+					<% @people2.each do |person| %>
+					<tr>
+						<td>
+							<a href="/people/<%= person.id %>"><%= person.first_name %> <%= person.last_name %></a>
+						</td>
+						<td>
+							<%if person.birthdate != nil %>
+								<%= person.birthdate.strftime("%m/%d/%Y") %>
+							<% end %>
+						</td>
+						<td>
+							<a class="btn btn-default btn-sm" role="button" href="/people/<%= person.id %>/edit">Edit</a>
+						</td>
+						<td>
+							<form action="<%= "/people/#{person.id}" %>" method="post">
+								<input type="hidden" name="_method" value="delete" />
+								<input class="btn btn-default btn-sm" type="submit" value="Delete" />
+							</form>
+						</td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
 </div>

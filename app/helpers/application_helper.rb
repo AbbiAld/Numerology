@@ -1,4 +1,18 @@
 module ApplicationHelper
+	def people_table_split(people)
+		@people_half = (people.count)/2
+	end
+
+
+	def people_form_heading(person)
+		if person.new_record?
+			@heading = "Add a Person"
+		else
+			@heading = "Update Person"
+		end
+		@heading
+	end
+
 	def people_form_method(person)
 		if person.new_record?
 			@method = "post"

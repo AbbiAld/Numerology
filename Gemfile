@@ -14,3 +14,4 @@ gem 'faker'
 
 gem 'kaminari-sinatra'
 gem 'kaminari-activerecord'
+gem 'kaminari-actionview'

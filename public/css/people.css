@@ -1,23 +1,40 @@
+
+html {
+}
+
 body {
-	background-image: url("/img/klemen-vrankar-757982-unsplash.jpg");
 	color: #efba88;
+	font-family: 'KoHo', sans-serif;
+	background-image: url("/img/klemen-vrankar-757982-unsplash.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
-.new-person {
-
+a {
+	color: #fbfbff;
 }
 
-.edit-person {
-
+.btn-default {
+	background-color: #757575;
+	color: #fbfbff;
+	border-color: #757575;
 }
 
 .form-control {
 	line-height: inherit !important;
 }
 
+.form-div {
+	text-align: center;
+	padding-top: 25%;
+}
+
+.form-div form {
+	text-align: left;
+}
+
 .show {
 	text-align: center;
+	padding-top: 25%;
 }

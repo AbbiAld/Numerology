@@ -1,4 +1,6 @@
 class Person < ActiveRecord::Base
+#	paginates_per 15
+
 	def self.get_birth_path_num(birthdate)
 		i = 0
 		digit_sum = 0
