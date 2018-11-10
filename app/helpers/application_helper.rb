@@ -1,6 +1,11 @@
 module ApplicationHelper
 	def people_table_split(people)
-		@people_half = (people.count)/2
+		if people.count.even?
+			@people_half = (people.count)/2
+		else
+			@people_half = (people.count)/2 + 1
+		end
+		@people_half
 	end
 
 

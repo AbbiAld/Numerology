@@ -1,6 +1,13 @@
 <div class="row col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
 	<div class="form-div">
 		<h1><%= people_form_heading(@person) %></h1>
+		<% if @error != nil %>
+			<div class="alert alert-danger" role="alert">
+			  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			  <span class="sr-only">Error:</span>
+			  <%= @error %>
+			</div>
+		<% end %>
 		<form action="<%= people_form_action(@person) %>"" method="post" id="<%= people_form_id(@person) %>" class="<%= people_form_class(@person) %>">
 			<input name="_method" type="hidden" value="<%= people_form_method(@person) %>" />
 			<div class="form-group">

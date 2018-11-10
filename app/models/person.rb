@@ -1,5 +1,5 @@
 class Person < ActiveRecord::Base
-#	paginates_per 15
+	validates_presence_of :first_name, :last_name, :birthdate
 
 	def self.get_birth_path_num(birthdate)
 		i = 0
